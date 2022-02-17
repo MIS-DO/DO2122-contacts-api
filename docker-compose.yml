@@ -3,13 +3,25 @@ services:
   contacts:
     build: .
     ports:
-      - "8080:8080"
+      - "${PORT:-8080}:${PORT:-8080}"
+    volumes:
+      - "logsvolume:/usr/src/app/logs"
     restart: "on-failure"
     depends_on:
       - mongo
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+      - DBPORT=${DBPORT}
   mongo:
     image: "mongo"
-    ports:
-      - "27017:27017"
+    command: --port ${DBPORT} --logpath /var/log/mongodb/mongodb.log
     volumes:
-      - "./data:/data/db"
+      - "logsvolume:/var/log/mongodb"
+      - "datavolume:/data/db"
+    expose:
+      - "${DBPORT}"
+volumes:
+  datavolume:
+  logsvolume:
+    external: true

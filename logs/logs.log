@@ -1,0 +1,77 @@
+2022-02-17 17:43:28 info: 	Initializing DB...
+2022-02-17 17:43:28 info: 	DB already has 4 contacts.
+2022-02-17 17:44:43 info: 	New GET request to /contacts
+2022-02-17 17:44:43 debug: 	Sending contacts: [{"_id":"620d4a8e1a45a63f1e5571d4","name":"John","phone":601234567,"email":"john.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d5","name":"Jane","phone":954556357,"email":"jane.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d6","name":"Foo","phone":954556358,"email":"foo@example.com"},{"_id":"620d4a8e1a45a63f1e5571d7","name":"Bar","phone":954556359,"email":"bar@example.com"}]
+2022-02-17 17:45:31 info: 	New DELETE request to /contacts/foobar
+2022-02-17 17:45:36 info: 	Initializing DB...
+2022-02-17 17:45:36 info: 	DB already has 4 contacts.
+2022-02-17 17:45:40 info: 	New DELETE request to /contacts/foobar
+2022-02-17 17:45:44 info: 	Initializing DB...
+2022-02-17 17:45:44 info: 	DB already has 4 contacts.
+2022-02-17 17:46:20 info: 	New GET request to /contacts/jose
+2022-02-17 17:46:20 warn: 	There are no contacts with name jose
+2022-02-17 17:48:11 info: 	New DELETE request to /contacts/n
+2022-02-17 17:48:15 info: 	Initializing DB...
+2022-02-17 17:48:15 info: 	DB already has 4 contacts.
+2022-02-17 17:53:49 info: 	New PUT request to /contacts/Jane with data {"name":"Jane","email":"jane@us.es","phone":5698887}
+2022-02-17 17:53:56 info: 	Initializing DB...
+2022-02-17 17:53:56 info: 	DB already has 4 contacts.
+2022-02-17 17:54:21 info: 	New GET request to /contacts
+2022-02-17 17:54:21 debug: 	Sending contacts: [{"_id":"620d4a8e1a45a63f1e5571d4","name":"John","phone":601234567,"email":"john.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d5","name":"Jane","phone":954556357,"email":"jane.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d6","name":"Foo","phone":954556358,"email":"foo@example.com"},{"_id":"620d4a8e1a45a63f1e5571d7","name":"Bar","phone":954556359,"email":"bar@example.com"}]
+2022-02-17 17:57:42 info: 	Initializing DB...
+2022-02-17 17:57:42 info: 	DB already has 4 contacts.
+2022-02-17 17:59:08 info: 	New GET request to /contacts
+2022-02-17 18:05:44 info: 	Initializing DB...
+2022-02-17 18:05:44 info: 	DB already has 4 contacts.
+2022-02-17 18:06:11 info: 	New GET request to /contacts
+2022-02-17 18:06:11 debug: 	Sending contacts: [{"_id":"620d4a8e1a45a63f1e5571d4","name":"John","phone":601234567,"email":"john.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d5","name":"Jane","phone":954556357,"email":"jane.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d6","name":"Foo","phone":954556358,"email":"foo@example.com"},{"_id":"620d4a8e1a45a63f1e5571d7","name":"Bar","phone":954556359,"email":"bar@example.com"}]
+2022-02-17 18:07:20 info: 	Initializing DB...
+2022-02-17 18:07:20 info: 	DB already has 4 contacts.
+2022-02-17 18:07:39 info: 	New GET request to /contacts
+2022-02-17 18:10:30 info: 	Initializing DB...
+2022-02-17 18:10:30 info: 	DB already has 4 contacts.
+2022-02-17 18:16:16 error: MongoServerSelectionError: getaddrinfo ENOTFOUND mongo
+    at Timeout._onTimeout (/usr/src/app/node_modules/mongodb/lib/sdam/topology.js:312:38)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+2022-02-17 18:16:16 info: 	Initializing DB...
+2022-02-17 18:16:16 error: MongoTopologyClosedError: Topology is closed
+    at processWaitQueue (/usr/src/app/node_modules/mongodb/lib/sdam/topology.js:608:46)
+    at Topology.selectServer (/usr/src/app/node_modules/mongodb/lib/sdam/topology.js:317:9)
+    at /usr/src/app/node_modules/mongodb/lib/operations/execute_operation.js:18:29
+    at maybePromise (/usr/src/app/node_modules/mongodb/lib/utils.js:496:5)
+    at executeOperation (/usr/src/app/node_modules/mongodb/lib/operations/execute_operation.js:16:37)
+    at FindCursor._initialize (/usr/src/app/node_modules/mongodb/lib/cursor/find_cursor.js:54:50)
+    at next (/usr/src/app/node_modules/mongodb/lib/cursor/abstract_cursor.js:445:16)
+    at fetchDocs (/usr/src/app/node_modules/mongodb/lib/cursor/abstract_cursor.js:241:17)
+    at /usr/src/app/node_modules/mongodb/lib/cursor/abstract_cursor.js:258:13
+    at maybePromise (/usr/src/app/node_modules/mongodb/lib/utils.js:496:5)
+2022-02-17 18:16:50 error: MongoServerSelectionError: getaddrinfo ENOTFOUND mongo
+    at Timeout._onTimeout (/usr/src/app/node_modules/mongodb/lib/sdam/topology.js:312:38)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+2022-02-17 18:16:50 info: 	Initializing DB...
+2022-02-17 18:16:50 error: MongoTopologyClosedError: Topology is closed
+    at processWaitQueue (/usr/src/app/node_modules/mongodb/lib/sdam/topology.js:608:46)
+    at Topology.selectServer (/usr/src/app/node_modules/mongodb/lib/sdam/topology.js:317:9)
+    at /usr/src/app/node_modules/mongodb/lib/operations/execute_operation.js:18:29
+    at maybePromise (/usr/src/app/node_modules/mongodb/lib/utils.js:496:5)
+    at executeOperation (/usr/src/app/node_modules/mongodb/lib/operations/execute_operation.js:16:37)
+    at FindCursor._initialize (/usr/src/app/node_modules/mongodb/lib/cursor/find_cursor.js:54:50)
+    at next (/usr/src/app/node_modules/mongodb/lib/cursor/abstract_cursor.js:445:16)
+    at fetchDocs (/usr/src/app/node_modules/mongodb/lib/cursor/abstract_cursor.js:241:17)
+    at /usr/src/app/node_modules/mongodb/lib/cursor/abstract_cursor.js:258:13
+    at maybePromise (/usr/src/app/node_modules/mongodb/lib/utils.js:496:5)
+2022-02-17 18:17:07 info: 	Initializing DB...
+2022-02-17 18:17:07 info: 	DB already has 4 contacts.
+2022-02-17 18:22:04 info: 	Initializing DB...
+2022-02-17 18:22:04 info: 	DB already has 4 contacts.
+2022-02-17 18:22:42 info: 	New GET request to /contacts
+2022-02-17 18:22:42 debug: 	Sending contacts: [{"_id":"620d4a8e1a45a63f1e5571d4","name":"John","phone":601234567,"email":"john.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d5","name":"Jane","phone":954556357,"email":"jane.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d6","name":"Foo","phone":954556358,"email":"foo@example.com"},{"_id":"620d4a8e1a45a63f1e5571d7","name":"Bar","phone":954556359,"email":"bar@example.com"}]
+2022-02-17 18:24:36 info: 	Initializing DB...
+2022-02-17 18:24:36 info: 	DB already has 4 contacts.
+2022-02-17 18:24:43 info: 	New GET request to /contacts
+2022-02-17 18:24:43 debug: 	Sending contacts: [{"_id":"620d4a8e1a45a63f1e5571d4","name":"John","phone":601234567,"email":"john.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d5","name":"Jane","phone":954556357,"email":"jane.doe@example.com"},{"_id":"620d4a8e1a45a63f1e5571d6","name":"Foo","phone":954556358,"email":"foo@example.com"},{"_id":"620d4a8e1a45a63f1e5571d7","name":"Bar","phone":954556359,"email":"bar@example.com"}]
+2022-02-17 18:26:32 info: 	Initializing DB...
+2022-02-17 18:26:32 info: 	Empty DB, loading initial data...
+2022-02-17 18:26:36 info: 	New GET request to /contacts
